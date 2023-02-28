@@ -13,9 +13,6 @@ export default function Imagem(props) {
                     <h1>ZapRecall</h1>
                 </div>
             </div>
-            <div className="concluidos">
-                <h1>Concluidos</h1>
-            </div>
         </>
     );
 }
