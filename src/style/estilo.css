@@ -40,6 +40,27 @@ body {
     font-weight: 400;
 }
 
+.perguntas{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.caixa h1{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.caixa{
+    margin-top: 30px ;
+      width: 100%;
+    height: auto;
+border-radius: 5px;
+background-color: #FFFFFF; ;
+padding: 25px;
+}
+
 .Jogo {
     display: flex;
     justify-content: space-around;
