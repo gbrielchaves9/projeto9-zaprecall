@@ -1,5 +1,5 @@
 import seta_play from "./assets/seta_play.png"
-import cards from "./cards"
+
 
 
 export default function Pergunta(props) {
