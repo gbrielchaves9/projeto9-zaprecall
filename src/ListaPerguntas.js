@@ -21,6 +21,7 @@ display: flex;
     align-items: center;
     margin-left: 40px;
     margin-right: 40px;
+    margin-bottom:90px;
 `;
 
 /*{cards.map((card,i)=>   
