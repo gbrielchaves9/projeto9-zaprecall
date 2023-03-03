@@ -1,18 +1,16 @@
-import Pergunta from "./Pergunta"
-import cards from "./cards";
+import Pergunta from './Pergunta';
 import styled from 'styled-components';
 
-
-export default function ListaPerguntas() {
-
-    return (
-        <>
-            <Perguntas>
-            {cards.map((ques, i) =>
-                <Pergunta key={ques.question} i={i} ques={ques} nperguntas={cards.length} />)}
-            </Perguntas >
-        </>
-    );
+export default function ListaPerguntas(props) {
+  return (
+    <>
+      <Perguntas>
+        {props.cards.map((ques, i) => (
+          <Pergunta key={ques.question} i={i} ques={ques} nperguntas={props.cards.length} />
+        ))}
+      </Perguntas>
+    </>
+  );
 }
 
 const Perguntas = styled.div`
