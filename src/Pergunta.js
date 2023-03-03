@@ -2,18 +2,22 @@ import seta_play from "./assets/seta_play.png"
 import styled from 'styled-components';
 
 
-export default function Pergunta({i}) {
-   
-
+export default function Pergunta({ i }) {
+    function ChamaPergunta() {
+      alert("Oi!");
+    }
+  
     return (
-        <>
-            <Caixa>
-                <h1>Pergunta {i +1}</h1>
-                <img src={seta_play} alt="forca" data-test="game-image" />
-            </Caixa>
-        </>
+      <>
+        <Caixa>
+          <h1>Pergunta {i + 1}</h1>
+          <img src={seta_play} alt="forca" data-test="game-image" onClick={ChamaPergunta} />
+        </Caixa>
+      </>
     );
-}
+  }
+
+  
 const Caixa = styled.div`
   margin-top: 30px ;
       width: 100%;

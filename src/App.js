@@ -7,7 +7,7 @@ import cards from './cards';
 export default function App() {
   const [cardsValue, setCardsValue] = useState(cards);
   
-  function handleQuestionComplete(index) {
+  function marcarPerguntaConcluida(index) {
     const newCardsValue = [...cardsValue];
     newCardsValue[index].completed = true;
     setCardsValue(newCardsValue);
@@ -18,7 +18,7 @@ export default function App() {
   return (
     <>
       <Imagem />
-      <ListaPerguntas cards={cardsValue} onQuestionComplete={handleQuestionComplete} />
+      <ListaPerguntas cards={cardsValue} onQuestionComplete={marcarPerguntaConcluida} />
       <Inferior nperguntas={cardsValue.length} completedQuestions={completedQuestions} />
     </>
   );

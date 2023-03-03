@@ -13,6 +13,7 @@ export default function ListaPerguntas(props) {
   );
 }
 
+
 const Perguntas = styled.div`
 display: flex;
     flex-direction: column;
