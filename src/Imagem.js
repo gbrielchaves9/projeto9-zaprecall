@@ -1,18 +1,44 @@
-
 import logo from "./assets/logo.png";
+import styled from 'styled-components';
 
-export default function Imagem(props) {
+
+export default function Imagem() {
 
     return (
         <>
-            <div className="superior">
-                <div className="raio">
-                    <img src={logo} />
-                </div>
-                <div className="titulo">
+            <Container>
+            
+                    <Foto src={logo} />
+                
+                    <Titulo>
                     <h1>ZapRecall</h1>
-                </div>
-            </div>
+                    </Titulo>
+                
+            </Container>
         </>
     );
 }
+const Container = styled.div`
+ display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 42px;
+    background-color: #27AE60;
+`;
+
+const Titulo = styled.div`
+    font-family: Righteous;
+       font-size: 36px;
+       font-weight: 400;
+       color: white;
+      
+`;
+const Foto = styled.img`
+	  height: 60px;
+    width: 52px;
+`;
+
+
+
+
+
