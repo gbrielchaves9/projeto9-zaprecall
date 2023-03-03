@@ -1,18 +1,16 @@
 import Pergunta from "./Pergunta"
+import cards from "./cards";
 import styled from 'styled-components';
 
 
-export default function ListaPerguntas(card) {
+export default function ListaPerguntas() {
 
     return (
         <>
             <Perguntas>
-                {card.map((prod) => (
-                <Pergunta
-                    produto={prod}
-                    />
-                    ))}
-            </Perguntas>
+            {cards.map((ques, i) =>
+                <Pergunta key={ques.question} i={i} ques={ques} nperguntas={cards.length} />)}
+            </Perguntas >
         </>
     );
 }
@@ -24,3 +22,6 @@ display: flex;
     margin-left: 40px;
     margin-right: 40px;
 `;
+
+/*{cards.map((card,i)=>   
+<Pergunta key={card.question} index={i}/>)}*/

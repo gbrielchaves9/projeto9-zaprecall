@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export default function Inferior(props) {
+export default function Inferior({nperguntas}) {
 
     return (
         <>
             <Concluidos>
-                <h1>Concluidos</h1>
+                <h1> 0/{nperguntas} conclidos </h1>
             </Concluidos>
         </>
     );
