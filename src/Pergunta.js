@@ -2,12 +2,13 @@ import seta_play from "./assets/seta_play.png"
 import styled from 'styled-components';
 
 
-export default function Pergunta(props) {
+export default function Pergunta(produto) {
+    const {question}= produto
 
     return (
         <>
             <Caixa>
-                <h1>Pergunta 1</h1>
+                <h1>{question}</h1>
                 <img src={seta_play} alt="forca" data-test="game-image" />
             </Caixa>
         </>

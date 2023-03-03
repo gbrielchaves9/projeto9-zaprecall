@@ -2,14 +2,16 @@ import Pergunta from "./Pergunta"
 import styled from 'styled-components';
 
 
-export default function ListaPerguntas(props) {
+export default function ListaPerguntas(card) {
 
     return (
         <>
             <Perguntas>
-                <Pergunta />
-                <Pergunta />
-                <Pergunta />
+                {card.map((prod) => (
+                <Pergunta
+                    produto={prod}
+                    />
+                    ))}
             </Perguntas>
         </>
     );
