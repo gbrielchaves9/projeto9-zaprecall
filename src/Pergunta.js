@@ -1,3 +1,5 @@
+
+
 import seta_play from "./assets/seta_play.png"
 import seta_virar from "./assets/seta_virar.png"
 import styled from 'styled-components';
@@ -59,9 +61,9 @@ export default function Pergunta({ i, ques}) {
               <ExibiResposta>
                 <h1>{ques.answer}</h1>
                 <AlinharBotao>
-                  <button onClick={() => voltaNormal('errou')}>Não lembrei</button>
-                  <button onClick={() => voltaNormal('quase')}>Quase Não lembrei</button>
-                  <button onClick={() => voltaNormal('certo')}>Zap!</button>
+                  <CompBot onClick={() => voltaNormal('errou')}>Não lembrei</CompBot>
+                  <CompBot onClick={() => voltaNormal('quase')}>Quase Não lembrei</CompBot>
+                  <CompBot onClick={() => voltaNormal('certo')}>Zap!</CompBot>
                 </AlinharBotao>
               </ExibiResposta>
             </>
@@ -70,7 +72,20 @@ export default function Pergunta({ i, ques}) {
     </>
   );
 }
-
+const CompBot = styled.button`
+        width: 90px;
+        font-family: 'Recursive';
+        font-style: normal;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 5px;
+        padding:5px;
+        background-color:green
+`
 
 
 const Caixa = styled.div`

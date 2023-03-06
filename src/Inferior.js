@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
-export default function Inferior({nperguntas}) {
+export default function Inferior({nperguntas, jogadas}) {
+    
 
     return (
         <>
             <Concluidos>
-                <h1> /{nperguntas} Concluidos </h1>
+                <h1>{jogadas} /{nperguntas} Concluidos </h1>
             </Concluidos>
         </>
     );

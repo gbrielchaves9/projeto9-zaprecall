@@ -12,14 +12,15 @@ export default function App() {
     newCardsValue[index].completed = true;
     setCardsValue(newCardsValue);
   }
+
   
   const completedQuestions = cardsValue.filter(question => question.completed).length;
   
   return (
     <>
       <Imagem />
-      <ListaPerguntas cards={cardsValue} onQuestionComplete={marcarPerguntaConcluida}   />
-      <Inferior nperguntas={cardsValue.length} completedQuestions={completedQuestions}  />
+      <ListaPerguntas cards={cardsValue} onQuestionComplete={marcarPerguntaConcluida} />
+      <Inferior nperguntas={cardsValue.length} completedQuestions={completedQuestions} />
     </>
   );
 }

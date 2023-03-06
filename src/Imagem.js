@@ -23,7 +23,6 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 42px;
-    background-color: #27AE60;
 `;
 
 const Titulo = styled.div`
