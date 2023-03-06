@@ -5,7 +5,7 @@ export default function Inferior({nperguntas}) {
     return (
         <>
             <Concluidos>
-                <h1> 0/{nperguntas} </h1>
+                <h1> 0/{nperguntas} Concluidos </h1>
             </Concluidos>
         </>
     );
