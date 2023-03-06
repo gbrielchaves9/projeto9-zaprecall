@@ -1,5 +1,4 @@
 
-
 import seta_play from "./assets/seta_play.png"
 import seta_virar from "./assets/seta_virar.png"
 import styled from 'styled-components';
@@ -46,24 +45,24 @@ export default function Pergunta({ i, ques}) {
   return (
     <>
       {!numero ? (
-        <Caixa>
-          <h1>Pergunta {i + 1}</h1>
-          <img src={tipoIcone()} alt="forca" data-test="game-image" onClick={virar} />
+        <Caixa data-test="flashcard">
+          <h1 data-test="flashcard-text" >Pergunta {i + 1}</h1>
+          <img src={tipoIcone()} alt="forca" data-test="play-btn" onClick={virar} />
         </Caixa>) : (
         <PerguntaEscondida>
           {!exibePergunta ? (
             <>
-              <h1>{ques.question}</h1>
-              <img src={seta_virar} alt="Seta para iniciar pergunta" onClick={resposta} />
+              <h1 data-test="flashcard-text" >{ques.question}</h1>
+              <img src={seta_virar} alt="Seta para iniciar pergunta" onClick={resposta} data-test="turn-btn"/>
             </>
           ) : (
             <>
               <ExibiResposta>
-                <h1>{ques.answer}</h1>
+                <h1 data-test="flashcard-text" >{ques.answer}</h1>
                 <AlinharBotao>
-                  <CompBot onClick={() => voltaNormal('errou')}>Não lembrei</CompBot>
-                  <CompBot onClick={() => voltaNormal('quase')}>Quase Não lembrei</CompBot>
-                  <CompBot onClick={() => voltaNormal('certo')}>Zap!</CompBot>
+                  <CompBot data-test="no-btn" onClick={() => voltaNormal('errou')}>Não lembrei</CompBot>
+                  <CompBot data-test="partial-btn" onClick={() => voltaNormal('quase')}>Quase Não lembrei</CompBot>
+                  <CompBot data-test="zap-btn" onClick={() => voltaNormal('certo')}>Zap!</CompBot>
                 </AlinharBotao>
               </ExibiResposta>
             </>
