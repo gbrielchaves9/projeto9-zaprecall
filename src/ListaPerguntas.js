@@ -6,7 +6,7 @@ export default function ListaPerguntas(props) {
     <>
       <Perguntas>
         {props.cards.map((ques, i) => (
-          <Pergunta key={ques.question} i={i} ques={ques} nperguntas={props.cards.length} />
+          <Pergunta key={ques.question} i={i} ques={ques} nperguntas={props.cards.length}  jogadas={props.jogadas}    />
         ))}
       </Perguntas>
     </>

@@ -18,8 +18,8 @@ export default function App() {
   return (
     <>
       <Imagem />
-      <ListaPerguntas cards={cardsValue} onQuestionComplete={marcarPerguntaConcluida} />
-      <Inferior nperguntas={cardsValue.length} completedQuestions={completedQuestions} />
+      <ListaPerguntas cards={cardsValue} onQuestionComplete={marcarPerguntaConcluida}   />
+      <Inferior nperguntas={cardsValue.length} completedQuestions={completedQuestions}  />
     </>
   );
 }
